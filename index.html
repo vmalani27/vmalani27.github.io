@@ -12,17 +12,20 @@
             justify-content: center;
             height: 100vh;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
-        h1 {
+        h1, p {
+            opacity: 0;
+            transition: opacity 2s ease;
             margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Hello</h1>
+    <h1 id="hello">Hello</h1>
     <p id="quote"></p>
     <script>
-        const quotes = [
+       const quotes = [
             "Reason 101 to have a BestFriend like u <3",
             "What is my Favourite Hottie doing?",
             "When you go to gym, the weights stare at u.",
@@ -34,9 +37,24 @@
             "I'll just hang a board with all of our school pics together in my room",
             "im so glad I have you as my male best friend"
         ];
-        
+
+        const helloElement = document.getElementById('hello');
+        const quoteElement = document.getElementById('quote');
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        document.getElementById('quote').innerText = randomQuote;
+
+        // Show "Hello" for 3 seconds, then fade out and fade in the quote
+        setTimeout(() => {
+            helloElement.style.opacity = 1;
+            setTimeout(() => {
+                helloElement.style.opacity = 0;
+                setTimeout(() => {
+                    quoteElement.innerText = randomQuote;
+                    quoteElement.style.opacity = 1;
+                }, 2000); // Fade to quote after "Hello" fades out
+            }, 3000); // Keep "Hello" visible for 3 seconds
+        }, 0); // Start immediately
     </script>
 </body>
 </html>
+
+        
