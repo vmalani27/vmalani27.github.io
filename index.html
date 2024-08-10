@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <h1 id="Hello Tanviiiii">Hello</h1>
+    <h1 id="hello">Hello, Tanviiii</h1> <!-- Corrected the id -->
     <p id="quote"></p>
     <script>
         const quotes = [
@@ -38,30 +38,18 @@
             "I will always be there for u",
             "We are mature enough to pull this beautiful friendship off.",
             "No matter what we will never leave each other behind",
-            "I'll just hang a board with all of our school pics together in my room",
-            "im so glad I have you as my male best friend"
+            "I'll just hang a board with all of our school pics together in my room",
+            "I'm so glad I have you as my male best friend"
         ];
 
-        const helloElement = document.getElementById('hello');
+        const helloElement = document.getElementById('hello'); // Corrected to match the id
         const quoteElement = document.getElementById('quote');
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-        // Show "Hello" for 3 seconds, then fade out and
-
-       
         // Show "Hello" for 3 seconds, then fade out and fade in the quote
         setTimeout(() => {
             helloElement.style.opacity = 1;
             setTimeout(() => {
                 helloElement.style.opacity = 0;
                 setTimeout(() => {
-                    quoteElement.innerText = randomQuote;
-                    quoteElement.style.opacity = 1;
-                }, 2000); // Fade to quote after "Hello" fades out
-            }, 3000); // Keep "Hello" visible for 3 seconds
-        }, 0); // Start immediately
-    </script>
-</body>
-</html>
-
-        
+                    quoteElement.innerText =
