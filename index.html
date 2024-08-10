@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p id="quote"></p>
+    <script>
+        const quotes = [
+            "Reason 101 to have a BestFriend like u <3",
+            "What is my Favourite Hottie doing?",
+            "When you go to gym, the weights stare at u.",
+            "My day is incomplete without your text",
+            "Good morning Cupcakse ;-)",
+            "I will always be there for u",
+            "We are mature enough to pull this beautiful friendship off.",
+            "No matter what we will never leave each other behind",
+            "I'll just hang a board with all of our school pics together in my room",
+            "im so glad I have you as my male best friend"
+        ];
+        
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById('quote').innerText = randomQuote;
+    </script>
+</body>
+</html>
