@@ -22,11 +22,12 @@
             transition: opacity 2s ease;
             margin-bottom: 20px;
             font-weight: bold; /* Make text bold */
+            font-size: 2em; /* Increase the font size for better visibility */
         }
     </style>
 </head>
 <body>
-    <h1 id="hello">Hello, Tanviiii</h1> <!-- Corrected the id -->
+    <h1 id="hello">Hello</h1>
     <p id="quote"></p>
     <script>
         const quotes = [
@@ -42,7 +43,7 @@
             "I'm so glad I have you as my male best friend"
         ];
 
-        const helloElement = document.getElementById('hello'); // Corrected to match the id
+        const helloElement = document.getElementById('hello');
         const quoteElement = document.getElementById('quote');
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
@@ -52,4 +53,11 @@
             setTimeout(() => {
                 helloElement.style.opacity = 0;
                 setTimeout(() => {
-                    quoteElement.innerText =
+                    quoteElement.innerText = randomQuote;
+                    quoteElement.style.opacity = 1;
+                }, 2000); // Fade to quote after "Hello" fades out
+            }, 3000); // Keep "Hello" visible for 3 seconds
+        }, 0); // Start immediately
+    </script>
+</body>
+</html>
