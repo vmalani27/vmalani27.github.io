@@ -12,12 +12,16 @@
             justify-content: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f8e1e7; /* Light pink background */
+            color: #6b3030; /* Darker, contrasting text color */
+            margin: 0;
+            padding: 0;
         }
         h1, p {
             opacity: 0;
             transition: opacity 2s ease;
             margin-bottom: 20px;
+            font-weight: bold; /* Make text bold */
         }
     </style>
 </head>
@@ -25,7 +29,7 @@
     <h1 id="hello">Hello</h1>
     <p id="quote"></p>
     <script>
-       const quotes = [
+        const quotes = [
             "Reason 101 to have a BestFriend like u <3",
             "What is my Favourite Hottie doing?",
             "When you go to gym, the weights stare at u.",
@@ -42,6 +46,9 @@
         const quoteElement = document.getElementById('quote');
         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
+        // Show "Hello" for 3 seconds, then fade out and
+
+       
         // Show "Hello" for 3 seconds, then fade out and fade in the quote
         setTimeout(() => {
             helloElement.style.opacity = 1;
